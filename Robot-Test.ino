@@ -1,4 +1,4 @@
-/*
+                                          /*
 Motor1
 Forward is 5 High, 9 Low.
 Backward is 9 High, 5 Low
@@ -24,23 +24,30 @@ void setup() {
 
 // the loop function runs over and over again forever
 void loop() {
+  //Forward
   digitalWrite(5, HIGH);
   digitalWrite(9,LOW);
   delay(3000);
+  //STOP!!!
   digitalWrite(5, LOW);
   digitalWrite(9, LOW);
   delay(20);
+  //Right Turn
   digitalWrite(6, LOW);
   digitalWrite(10, HIGH);
   delay(20);
+  //Stop the steering motor!
   digitalWrite(6, LOW);
   digitalWrite(10, LOW);
+  //Reverse
   digitalWrite(9, HIGH);
   digitalWrite(5, LOW);
   delay(3000);
+  //Centre steering
   digitalWrite(6, HIGH);
   digitalWrite(10, LOW);
   delay(10);
+  //Stop the steering motor!
   digitalWrite(6, LOW);
   digitalWrite(10, LOW);
 }
